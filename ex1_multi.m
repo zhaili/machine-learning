@@ -106,6 +106,12 @@ fprintf('\n');
 % not need to be normalized.
 price = 0; % You should change this
 
+xx = [1650, 3];
+X = data(:, 1:2);
+
+xx_normal = (xx - mean(X)) ./ sigma;
+
+price = [1 xx_normal] * theta
 
 % ============================================================
 
@@ -150,6 +156,9 @@ fprintf('\n');
 % Estimate the price of a 1650 sq-ft, 3 br house
 % ====================== YOUR CODE HERE ======================
 price = 0; % You should change this
+xx = [1, 1650, 3]
+
+price = xx * theta
 
 
 % ============================================================
