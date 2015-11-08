@@ -107,9 +107,8 @@ fprintf('\n');
 price = 0; % You should change this
 
 xx = [1650, 3];
-X = data(:, 1:2);
 
-xx_normal = (xx - mean(X)) ./ sigma;
+xx_normal = (xx - mu) ./ sigma;
 
 price = [1 xx_normal] * theta
 
