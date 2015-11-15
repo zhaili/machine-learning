@@ -12,11 +12,11 @@ figure; hold on;
 %               examples and 'ko' for the negative examples.
 %
 
+indice1 = find(y);
+plot(X(indice1, 1), X(indice1, 2), "k+");
 
-
-
-
-
+indice2 = find(y == 0);
+plot(X(indice2, 1), X(indice2, 2), "ko");
 
 
 
